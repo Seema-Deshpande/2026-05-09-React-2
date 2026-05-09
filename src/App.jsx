@@ -3,11 +3,11 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
-import "./App.css"
+import './App.css';
 import Home from './pages/User/Home';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('login');
+  const [, setCurrentPage] = useState('login');
   const [darkMode, setDarkMode] = useState(() => {
     // Load dark mode preference from localStorage
     const savedMode = localStorage.getItem('darkMode');
@@ -31,16 +31,18 @@ function App() {
 
   return (
     <div className="app-layout">
-      <Header onNavigate={setCurrentPage} darkMode={darkMode} onToggleDarkMode={toggleDarkMode} />
+      <Header
+        onNavigate={setCurrentPage}
+        darkMode={darkMode}
+        onToggleDarkMode={toggleDarkMode}
+      />
       <main className="main-center-content">
-        
         {/* Auth Pages */}
         {/* <Login /> */}
         {/* <Register /> */}
-        
+
         {/* User Pages */}
         <Home />
-        
       </main>
       <Footer />
     </div>
