@@ -1,8 +1,8 @@
-import { Card, Form, Button } from "react-bootstrap";
+import { Card, Form, Button } from 'react-bootstrap';
 import './CommentForm.css';
 
 export default function CommentForm() {
-  const handlePostComment = (e) => {
+  const handlePostComment = () => {
     alert('Post Comment clicked!');
   };
 

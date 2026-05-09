@@ -1,4 +1,4 @@
-import { Navbar, Container, Button } from "react-bootstrap";
+import { Navbar, Container, Button } from 'react-bootstrap';
 import './Header.css';
 
 function Header({ onNavigate, darkMode, onToggleDarkMode }) {
@@ -29,7 +29,7 @@ function Header({ onNavigate, darkMode, onToggleDarkMode }) {
               className="dark-mode-toggle"
               onClick={onToggleDarkMode}
               aria-label="Toggle dark mode"
-              title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+              title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {darkMode ? '☀️' : '🌙'}
             </button>
@@ -39,10 +39,16 @@ function Header({ onNavigate, darkMode, onToggleDarkMode }) {
               </Button>
             ) : (
               <>
-                <Button className="btn-header btn-outline me-2" onClick={handleLogin}>
+                <Button
+                  className="btn-header btn-outline me-2"
+                  onClick={handleLogin}
+                >
                   Login
                 </Button>
-                <Button className="btn-header btn-primary" onClick={handleSignup}>
+                <Button
+                  className="btn-header btn-primary"
+                  onClick={handleSignup}
+                >
                   Register
                 </Button>
               </>

@@ -26,7 +26,11 @@
   justify-content: center;
   width: 42px;
   height: 42px;
-  background: linear-gradient(135deg, var(--primary-orange), var(--primary-blue));
+  background: linear-gradient(
+    135deg,
+    var(--primary-orange),
+    var(--primary-blue)
+  );
   color: white;
   font-size: 16px;
   font-weight: 700;

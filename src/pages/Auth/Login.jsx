@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Container, Card, Form, Button } from "react-bootstrap";
+import { Container, Card, Form, Button } from 'react-bootstrap';
 import './Auth.css';
 
-function Login() {
+function Login({ onNavigate }) {
   const [form, setForm] = useState({ email: '', password: '' });
 
   const handleChange = e => {
@@ -34,7 +34,9 @@ function Login() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingEmail" className="auth-form-label">Email</label>
+            <label htmlFor="floatingEmail" className="auth-form-label">
+              Email
+            </label>
           </Form.Floating>
 
           <Form.Floating className="mb-4">
@@ -48,17 +50,31 @@ function Login() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingPassword" className="auth-form-label">Password</label>
+            <label htmlFor="floatingPassword" className="auth-form-label">
+              Password
+            </label>
           </Form.Floating>
 
           <Button type="submit" variant="primary" className="auth-submit-btn">
             <i className="bi bi-box-arrow-in-right me-2"></i>
             Login
           </Button>
+
+          {onNavigate && (
+            <div className="text-center mt-3">
+              <Button
+                variant="link"
+                className="p-0 text-decoration-none"
+                style={{ color: 'var(--primary-blue)', fontSize: '14px' }}
+                onClick={() => onNavigate('forgot-password')}
+              >
+                Forgot your password?
+              </Button>
+            </div>
+          )}
         </Form>
       </Card>
     </Container>
-
   );
 }
 

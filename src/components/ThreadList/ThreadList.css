@@ -1,6 +1,6 @@
 .thread-card {
-  background-color: var(--bg-white, #FFFFFF);
-  border: 1px solid var(--border-light, #EDEFF1);
+  background-color: var(--bg-white, #ffffff);
+  border: 1px solid var(--border-light, #edeff1);
   border-radius: 12px;
   margin-bottom: 18px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -10,7 +10,7 @@
 
 .thread-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border-color: var(--primary-blue, #0079D3);
+  border-color: var(--primary-blue, #0079d3);
   transform: translateY(-2px);
 }
 
@@ -26,7 +26,7 @@
   align-items: center;
   min-width: 50px;
   padding: 8px;
-  background-color: var(--bg-light, #F8F9FA);
+  background-color: var(--bg-light, #f8f9fa);
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
@@ -38,7 +38,7 @@
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--text-muted, #7C7C7C);
+  color: var(--text-muted, #7c7c7c);
   width: 32px;
   height: 32px;
   display: flex;
@@ -47,24 +47,24 @@
 }
 
 .vote-btn:hover {
-  background-color: var(--hover-bg, #F6F7F8);
+  background-color: var(--hover-bg, #f6f7f8);
   transform: scale(1.15);
 }
 
 .vote-btn.upvote:hover {
-  color: var(--primary-orange, #FF4500);
+  color: var(--primary-orange, #ff4500);
   background-color: rgba(255, 69, 0, 0.1);
 }
 
 .vote-btn.downvote:hover {
-  color: var(--primary-blue, #0079D3);
+  color: var(--primary-blue, #0079d3);
   background-color: rgba(0, 121, 211, 0.1);
 }
 
 .vote-count {
   font-size: 13px;
   font-weight: 800;
-  color: var(--text-dark, #1A1A1B);
+  color: var(--text-dark, #1a1a1b);
   margin: 6px 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -85,7 +85,7 @@
 .thread-title {
   font-size: 19px;
   font-weight: 700;
-  color: var(--text-dark, #1A1A1B);
+  color: var(--text-dark, #1a1a1b);
   margin: 0;
   line-height: 1.5;
   word-break: break-word;
@@ -109,7 +109,7 @@
 
 .thread-text {
   font-size: 14px;
-  color: var(--text-muted, #7C7C7C);
+  color: var(--text-muted, #7c7c7c);
   margin: 0 0 10px 0;
   line-height: 1.5;
   white-space: pre-line;
@@ -128,8 +128,8 @@
   padding: 6px 12px;
   border-radius: 20px;
   background-color: transparent;
-  color: var(--primary-blue, #0079D3);
-  border: 1px solid var(--primary-blue, #0079D3);
+  color: var(--primary-blue, #0079d3);
+  border: 1px solid var(--primary-blue, #0079d3);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -138,7 +138,7 @@
 }
 
 .view-thread-btn:hover {
-  background-color: var(--primary-blue, #0079D3);
+  background-color: var(--primary-blue, #0079d3);
   color: white;
   text-decoration: none;
 }
@@ -166,7 +166,7 @@
   .vote-count {
     font-size: 11px;
   }
-  
+
   .thread-card {
     max-width: 100%;
     overflow-x: hidden;

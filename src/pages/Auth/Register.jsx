@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Card, Form, Button } from "react-bootstrap";
+import { Container, Card, Form, Button } from 'react-bootstrap';
 import './Auth.css';
 
 function Register() {
@@ -34,7 +34,9 @@ function Register() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingName" className="auth-form-label">Name</label>
+            <label htmlFor="floatingName" className="auth-form-label">
+              Name
+            </label>
           </Form.Floating>
 
           <Form.Floating className="mb-4">
@@ -48,7 +50,9 @@ function Register() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingEmail" className="auth-form-label">Email</label>
+            <label htmlFor="floatingEmail" className="auth-form-label">
+              Email
+            </label>
           </Form.Floating>
 
           <Form.Floating className="mb-4">
@@ -62,7 +66,9 @@ function Register() {
               required
               className="auth-form-control"
             />
-            <label htmlFor="floatingPassword" className="auth-form-label">Password</label>
+            <label htmlFor="floatingPassword" className="auth-form-label">
+              Password
+            </label>
           </Form.Floating>
 
           <Button type="submit" variant="primary" className="auth-submit-btn">

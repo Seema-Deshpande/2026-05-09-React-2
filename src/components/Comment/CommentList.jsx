@@ -1,5 +1,5 @@
 import { getUserName } from '../../services/userService';
-import { Card } from "react-bootstrap";
+import { Card } from 'react-bootstrap';
 import VoteButtons from '../Shared/VoteButtons';
 import './CommentList.css';
 
@@ -14,7 +14,7 @@ export default function CommentList({ comments, upvote }) {
 
   return (
     <div className="d-flex flex-column gap-3">
-      {comments.map((comment) => (
+      {comments.map(comment => (
         <Card key={comment._id} className="comment-card">
           <Card.Body>
             {/* Header */}

@@ -3,7 +3,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
-import "./App.css"
+import ForgotPassword from './pages/Auth/ForgotPassword';
+import './App.css';
 import Home from './pages/User/Home';
 
 function App() {
@@ -31,16 +32,21 @@ function App() {
 
   return (
     <div className="app-layout">
-      <Header onNavigate={setCurrentPage} darkMode={darkMode} onToggleDarkMode={toggleDarkMode} />
+      <Header
+        onNavigate={setCurrentPage}
+        darkMode={darkMode}
+        onToggleDarkMode={toggleDarkMode}
+      />
       <main className="main-center-content">
-        
         {/* Auth Pages */}
-        {/* <Login /> */}
-        {/* <Register /> */}
-        
+        {currentPage === 'login' && <Login onNavigate={setCurrentPage} />}
+        {currentPage === 'register' && <Register onNavigate={setCurrentPage} />}
+        {currentPage === 'forgot-password' && (
+          <ForgotPassword onNavigate={setCurrentPage} />
+        )}
+
         {/* User Pages */}
-        <Home />
-        
+        {currentPage === 'home' && <Home />}
       </main>
       <Footer />
     </div>
