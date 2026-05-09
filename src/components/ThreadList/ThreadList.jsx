@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import './ThreadList.css';
+import ThreadCard from "./ThreadCard";
 
 export default function ThreadList({ threads, onSelect }) {
   const handleUpvote = () => {
@@ -11,7 +12,15 @@ export default function ThreadList({ threads, onSelect }) {
 
   return (
     <Container fluid className="px-0">
-      {/* Your Code Here  */}
+      {threads.map((thread)=>{
+        return (
+          <ThreadCard
+            key={thread._id}
+            thread={thread}
+            homePage          
+          />
+        )
+      })}
     </Container>
   );
 }

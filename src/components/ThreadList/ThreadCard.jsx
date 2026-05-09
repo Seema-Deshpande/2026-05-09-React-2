@@ -3,7 +3,11 @@ import { Card, Button, Col, Row, Stack } from "react-bootstrap";
 import VoteButtons from '../Shared/VoteButtons';
 import './ThreadCard.css';
 
-export default function ThreadCard({ thread, goBack }) {
+export default function ThreadCard({ 
+  thread, 
+  goBack,
+  homePage
+ }) {
   const voteCount = thread.upvotedBy.length - thread.downvotedBy.length;
 
   const handleUpvote = async () => {
@@ -17,6 +21,7 @@ export default function ThreadCard({ thread, goBack }) {
   return (
     <Card className="single-thread-card">
       <Card.Body>
+        { !homePage &&
         <Button
           onClick={goBack}
           variant="link"
@@ -25,7 +30,7 @@ export default function ThreadCard({ thread, goBack }) {
         >
           <i className="bi bi-arrow-left me-2"></i>Back to Home
         </Button>
-
+        }
         <Row className="g-3">
           {/* Voting UI */}
           <Col xs="auto">
