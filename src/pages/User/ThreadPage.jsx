@@ -16,6 +16,8 @@ export default function ThreadPage({ thread, goBack }) {
   return (
     <Container className="thread-container">
      <ThreadCard thread ={thread} goBack={goBack} />
+     <CommentForm/>
+     <CommentList comments={threadComments} />
     </Container>
   );
 }

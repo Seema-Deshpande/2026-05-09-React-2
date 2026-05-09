@@ -4,6 +4,9 @@ import VoteButtons from '../Shared/VoteButtons';
 import './CommentList.css';
 
 export default function CommentList({ comments }) {
+  if (comments.length === 0) {
+    return <div> No comments yet. Be the first to comment!</div>;
+  }
   const handleUpvote = () => {
     alert('Upvote clicked!');
   };
