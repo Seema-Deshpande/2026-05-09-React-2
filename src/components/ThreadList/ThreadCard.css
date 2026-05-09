@@ -128,14 +128,14 @@
 }
 
 .thread-meta-badge {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #1a6b2e;
   color: white !important;
   padding: 6px 14px;
   font-size: 12px;
   font-weight: 700;
   border: none !important;
-  border-radius: 16px;
-  text-transform: uppercase;
+  border-radius: 0;
+  text-transform: lowercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  box-shadow: none;
 }
