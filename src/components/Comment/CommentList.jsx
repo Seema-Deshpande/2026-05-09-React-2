@@ -3,13 +3,11 @@ import { Card } from "react-bootstrap";
 import VoteButtons from '../Shared/VoteButtons';
 import './CommentList.css';
 
-export default function CommentList({ comments }) {
+export default function CommentList({ comments, upvote }) {
   if (comments.length === 0) {
     return <div> No comments yet. Be the first to comment!</div>;
   }
-  const handleUpvote = () => {
-    alert('Upvote clicked!');
-  };
+
   const handleDownvote = () => {
     alert('Downvote clicked!');
   };
@@ -42,7 +40,7 @@ export default function CommentList({ comments }) {
             <div className="d-flex align-items-center gap-2">
               <VoteButtons
                 count={comment.voteCount}
-                onUpvote={handleUpvote}
+                onUpvote={() => upvote(comment._id)}
                 onDownvote={handleDownvote}
                 btnClassName="comment-vote-btn"
                 countClassName="comment-vote-count"
