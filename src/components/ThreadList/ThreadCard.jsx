@@ -6,7 +6,8 @@ import './ThreadCard.css';
 export default function ThreadCard({ 
   thread, 
   goBack,
-  homePage
+  homePage,
+  onSelect
  }) {
   const voteCount = thread.upvotedBy.length - thread.downvotedBy.length;
 
@@ -60,6 +61,15 @@ export default function ThreadCard({
               <div className="d-flex align-items-center gap-2">
                 <i className="bi bi-bookmark thread-meta-icon"></i>
                 <span className="badge thread-meta-badge">r/{thread.subredditName}</span>
+                { homePage && 
+                  <Button 
+                  size="sm"
+                  onClick={()=>{
+                  onSelect(thread)
+                 }}
+                >View Comments
+                </Button>
+     }
               </div>
             </div>
           </Col>

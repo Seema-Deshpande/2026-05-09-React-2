@@ -15,7 +15,7 @@ export default function ThreadPage({ thread, goBack }) {
 
   return (
     <Container className="thread-container">
-      {/* Your Code here  */}
+     <ThreadCard thread ={thread} goBack={goBack} />
     </Container>
   );
 }

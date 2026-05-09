@@ -23,7 +23,7 @@ export default function Home() {
         <h1 className="home-title mb-4 display-6 fw-semibold border-bottom pb-2">
           🧵 Recent Threads
         </h1>
-        <ThreadList threads={recentThreads}  />
+        <ThreadList threads={recentThreads} onSelect={setSelectedThread} />
       </Card>
     </Container>
   );
